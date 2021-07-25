@@ -44,7 +44,7 @@ function showNotes(){
   notesObj.forEach(function(item, index){
     html=html +                   /*** this is the body of notes being accessed while running for each loop in notesObj array  */
     `
-    <div class="noteCard my-2 mx-2" style="width: 18rem;">
+    <div class="card noteCard my-2 mx-2" style="width: 18rem;">
     <div class="card-body">
       <h5 class="card-title">${item.heading}</h5>
       <p class="card-text"> ${item.body}</p>
