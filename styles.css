@@ -3,6 +3,11 @@ body{
     background-attachment: fixed;
     
 }
+.navbar{
+    background-color: rgb(206, 113, 167);
+    
+
+}
 
 .card-body{
     background:rgba(243, 245, 245, 0.85);
