@@ -1,18 +1,15 @@
 
 showNotes()  // calling the function as the page loads to show all notes stored in local storage
 
-// NOTE: difference between var and let. scope of variable created by "var" stays in it's topmost parent function. while scope of variable created by 
-//       "let" stays in it's scope;
-//       So, we AVOID 'var'  and use "let" more often
 
 
 
                                         /** adding typed note to local storage*/
 
-let addBtn = document.getElementById('addBtn');  // targeting the add button 
-addBtn.addEventListener("click", function(event){  // adding click event listener to button
-   let addTxt = document.getElementById('addTxt');  // targeting input text area
-   let heading = document.getElementById('heading'); // targetting input area which takes note heading
+let addBtn = document.getElementById('addBtn');  
+addBtn.addEventListener("click", function(event){  
+   let addTxt = document.getElementById('addTxt');  
+   let heading = document.getElementById('heading');
    let notes = localStorage.getItem("notes");  // retrieving text from local storage. It is an array which is read only and resides in browser
    
    let currdata = new Object();  // creating object to store heading, and body of a note
@@ -21,16 +18,16 @@ addBtn.addEventListener("click", function(event){  // adding click event listene
    //console.log(currdata);
 
    if(notes==null){
-     notesObj=[];              // if local storage is empty, we created a global array "notesObj". variable withour var/let are made global
+     notesObj=[];              // if local storage is empty, we created a global array "notesObj"
    }
    else{
        notesObj= JSON.parse(notes);  // stored retrieved text into array
    }
    notesObj.push(currdata);      // adding current value of textbox to array (current value is an object containing head and body)
    localStorage.setItem("notes", JSON.stringify(notesObj));  // replacing local storage with our updated array
-   addTxt.value="";   // emptying text boxes
+   addTxt.value="";  
    heading.value="";
-   //console.log(notesObj);
+  
    showNotes(); // a function to display notes saved in localstorage
 });
 
@@ -87,7 +84,7 @@ function deleteNote(index){
   else{
     notesObj=JSON.parse(notes);              // stored the recieved data into notesObj array
   }
-  notesObj.splice(index,1);     // deleted index 1 from notesObj array using splice
+  notesObj.splice(index,1);     
   localStorage.setItem("notes", JSON.stringify(notesObj));
   showNotes();
 }
@@ -113,7 +110,7 @@ searchFld.addEventListener("input",function(){  // this function is triggered as
        element.style.display="none";
      }
     
-     // console.log(cardTxt);
+    
    });
 
 });
