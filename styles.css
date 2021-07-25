@@ -9,8 +9,8 @@ body{
 
 }
 
-.card-body{
-    background:rgba(243, 245, 245, 0.85);
+.card{
+  background:rgba(243, 243, 245, 0.85) !important;
   backdrop-filter: blur(13px);
   box-shadow: 0 0 20px -2px rgba(0, 0, 0, 0.603);
   border-radius: 5px;
