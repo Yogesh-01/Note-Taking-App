@@ -1,0 +1,24 @@
+body{
+    background-image: url(bgsmall.png);
+    background-attachment: fixed;
+    
+}
+
+.card-body{
+    background:rgba(243, 245, 245, 0.85);
+  backdrop-filter: blur(13px);
+  box-shadow: 0 0 20px -2px rgba(0, 0, 0, 0.603);
+  border-radius: 5px;
+  
+}
+h1{
+    font-family: 'Open Sans', sans-serif;
+    text-shadow: 2px 2px 5px #d3d0d0b4;
+    font-weight: 500;
+    color: rgb(20, 20, 20);
+
+}
+hr{
+    border: 1px solid;
+    color: rgba(88, 104, 101, 0.336);
+}
